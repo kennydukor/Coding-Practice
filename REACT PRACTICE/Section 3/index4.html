@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- REACT LIBRARY -->
+	<script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+	<!-- REACT DOM LIBRARY -->
+	<script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+	<!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    
+	<title>Styling Components</title>
+</head>
+<body>
+	<!-- DESIGNATED LOCATION TO INSERT REACT CONTENT -->
+	<div id="app">React has not rendered yet</div>
+	<!-- JAVASCRIPT -->
+	<script type="text/babel">
+	// OUR FIRST STATELESS FUNCTIONAL COMPONENT
+		var Circle = function(){
+            var circle = {
+                height: 100,
+                width: 100,
+                background: "yellow",
+                borderRadius: "50%"
+
+            }
+            return(
+                <h1 style={circle}>Red</h1>
+            );
+        }
+        var Square = function(){
+            var square = {
+                height: 100,
+                width: 200,
+                background: "orange"
+            }
+            return(
+                <h1 style={square}>Orange</h1>
+            );
+        }
+        var Rectangle = function(){
+            var rectangle = {
+                height: 100,
+                width: 100,
+                background: "red"
+            }
+            return(
+                <h1 style={rectangle}>Yellow</h1>
+            );
+        }
+
+        ReactDOM.render(
+			// REACT WHAT 
+            <div>
+			<Circle/>
+            <Square/>
+            <Rectangle/>
+            </div>,
+			// REACT WHERE - DIV WITH ID OF "APP"
+			document.getElementById("app")
+		);
+	</script>
+</body>
+</html>

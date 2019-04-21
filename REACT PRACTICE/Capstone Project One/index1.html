@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- REACT LIBRARY -->
+	<script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+	<!-- REACT DOM LIBRARY -->
+	<script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+	<!-- BABEL LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<title>FriendLy</title>
+</head>
+<body>
+	<!-- DESIGNATED LOCATION TO INSERT REACT CONTENT -->
+	<div id="app">React has not rendered yet</div>
+	<!-- JAVASCRIPT -->
+	<script type="text/babel">
+	// FriendLy Component
+    function FriendLy() {
+        var frendlystyle = {
+            height: 300,
+            width: 200,
+            padding: 0,
+            backgroundColor: "#FFF",
+            WebkitFilter: "drop-shadow(0px 0px 5px #555)",
+            filter: "drop-shadow(0px 0px 5px #555)"
+        }
+        return(
+            <div style={frendlystyle}>
+                <Avatar/>
+                <UserName/>
+                <GetConnected/>
+            </div>
+        );
+    }
+
+    // Avatar Component
+    function Avatar(){
+        var avatarStyle = {
+            marginLeft: 20,
+            marginTop: 20,
+            height: 150,
+            width: 150,
+            borderRadius: "50%"
+        }
+        return(
+            <img style={avatarStyle} src="C:\Users\Kenechi.Dukor\Pictures\ken.png" alt="profile image"/>
+        );
+    }
+    // UserName Component
+    function UserName(){
+        var nameStyle = {
+            fontSize: 24,
+            fontFamily: "Arial, Helvetica, sans-serif",
+            margin: 20
+        }
+        return(
+            <h1 style={nameStyle}>Kenechi</h1>
+        );
+    }
+
+    // GetConnected Component
+    function GetConnected(){
+        return(
+            <div>
+                <Like/>
+                <Share/>
+                <Add/>
+            </div>
+        );
+    }
+
+    var iconStyle = {
+        margin: 20
+    }
+
+    // Like Component
+    function Like(){
+        return(
+            <i className="fas fa-thumbs-up" style={iconStyle}></i>
+        );
+    }
+
+    // Share Component
+    function Share(){
+        return(
+            <i className="fas fa-share-alt-square" style={iconStyle}></i>
+        );
+    }
+
+    // Add Component
+    function Add(){
+        return(
+            <i className="fas fa-user-plus" style={iconStyle}></i>
+        );
+    }
+
+		ReactDOM.render(
+			// REACT WHAT - JSX
+			<FriendLy/>,
+			// REACT WHERE - DIV WITH ID OF "APP"
+			document.getElementById("app")
+		);
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- REACT LIBRARY -->
+	<script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
+	<!-- REACT DOM LIBRARY -->
+	<script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
+	<!-- BABEL LIBRARY -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+	<title>Let's React</title>
+</head>
+<body>
+	<!-- DESIGNATED LOCATION TO INSERT REACT CONTENT -->
+    <div id="app_1">React has not rendered yet</div>
+    <div id="app_2">React has not rendered yet</div>
+    <div id="app_3">React has not rendered yet</div>
+	<!-- JAVASCRIPT -->
+	<script type="text/babel">
+	// RENDER REACT TO THE DOM - WILL ACCEPT TWO ARGUMENTS(REACT WHAT, REACT WHERE)
+		ReactDOM.render(
+			// REACT WHAT - JSX
+			<p1>I am a Paragraph</p1>,
+			// REACT WHERE - DIV WITH ID OF "APP"
+			document.getElementById("app_1")
+		);
+        ReactDOM.render(
+			// REACT WHAT - JSX
+			<a href="http://google.com">click to visit google</a>,
+			// REACT WHERE - DIV WITH ID OF "APP"
+			document.getElementById("app_2")
+		);
+        ReactDOM.render(
+			// REACT WHAT - JSX
+			<ul>
+            <li> Work </li>
+            <li> Sleep </li>
+            <li> Sleep </li>
+            </ul>,
+			// REACT WHERE - DIV WITH ID OF "APP"
+			document.getElementById("app_3")
+		);
+	</script>
+</body>
+</html>
